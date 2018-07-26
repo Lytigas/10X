@@ -25,7 +25,8 @@ When a cursor is created, it's instruction pointer is placed after the instructi
 If multiple cursors attempt to occupy the same cell at any point, those lower in the execution order are killed.
 
 Instruction set:
-```
+
+```txt
 M[0-9] Move cursor in the positive direction on the given axis
 m[0-9] Move cursor in the negative direction on the given axis
 X[0-9] Duplicate cursor in the positive direction on the given axis
@@ -37,9 +38,8 @@ j jump to the portal if the current cell is 0
 + Increment the current cells
 - Decrement the current cells
 | Do nothing
-: Read input cell by cell at the location of each cursor. Cursors at lower positions are selected first, with lower axis having higher precedence.
-. Read one input into all cells
-, Output the bytes at each cell, using the same ordering as ":"
+. Read input into the cell
+, Output the bytes at the cell
 [ if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching ] command
 ] if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching [ command
 ```
