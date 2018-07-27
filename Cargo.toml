@@ -1,0 +1,6 @@
+[package]
+name = "10x-lang"
+version = "0.1.0"
+authors = ["Josh Hejna <josh.hejna@gmail.com>"]
+
+[dependencies]
